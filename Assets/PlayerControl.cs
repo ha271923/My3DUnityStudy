@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerControl : MonoBehaviour
 {
+    public float speed = 1.0f;  // DANGEROUS: this value is not same with the value on Unity GUI whatever sync or not.
+
     private Rigidbody rb;
     private float movementX;
     private float movementY;
@@ -23,7 +25,7 @@ public class PlayerControl : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        rb.AddForce(movement);
+        rb.AddForce(movement * speed);
     }
 
 }
