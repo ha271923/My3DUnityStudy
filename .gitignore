@@ -1,0 +1,25 @@
+.idea
+.log
+dist
+Library/
+obj/
+Temp/
+output.*/
+temp
+
+
+.vs/
+
+UnityPackageManager
+
+# Gameframework assets bundle
+Assets/StreamingAssets.meta
+Assets/StreamingAssets/
+AssetsBundleOutput~/
+AssetsBundleOutput~.meta
+Assets/ThirdPlugins/GameFramework/Configs/AssetBundleCollection.xml.meta
+Assets/ThirdPlugins/GameFramework/Configs/AssetBundleCollection.xml
+
+# Local built apk
+*.apk
+
