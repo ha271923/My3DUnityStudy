@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 251481636}
   - component: {fileID: 251481638}
   - component: {fileID: 251481637}
+  - component: {fileID: 251481639}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -407,7 +408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -166, y: 76}
+  m_AnchoredPosition: {x: -50, y: 208}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &251481637
@@ -506,6 +507,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251481635}
   m_CullTransparentMesh: 0
+--- !u!114 &251481639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251481635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0426a55eae267c4390c2e6d83ee6d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &556930007
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,7 +978,7 @@ GameObject:
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1110,7 +1123,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Scene1_button
 --- !u!222 &1276662943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1225,7 +1238,7 @@ GameObject:
   - component: {fileID: 1433977581}
   - component: {fileID: 1433977580}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button_Scene1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1248,7 +1261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 112, y: 123}
+  m_AnchoredPosition: {x: -286, y: 123}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433977580
@@ -1353,6 +1366,7 @@ GameObject:
   - component: {fileID: 1498776684}
   - component: {fileID: 1498776686}
   - component: {fileID: 1498776685}
+  - component: {fileID: 1498776687}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1376,7 +1390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -185, y: 126}
+  m_AnchoredPosition: {x: -285, y: 206}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498776685
@@ -1420,6 +1434,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498776683}
   m_CullTransparentMesh: 0
+--- !u!114 &1498776687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498776683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0426a55eae267c4390c2e6d83ee6d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1568481330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,7 +1645,7 @@ GameObject:
   - component: {fileID: 2023862301}
   - component: {fileID: 2023862300}
   m_Layer: 5
-  m_Name: Button ( with TMP )
+  m_Name: Button_TMP_Scene2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1642,8 +1668,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 112, y: 82}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -237, y: 74}
+  m_SizeDelta: {x: 262.34247, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2023862300
 MonoBehaviour:
@@ -1687,7 +1713,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2023862301}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1194883214}
+        m_MethodName: loadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MyScene_2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2023862301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,7 +1818,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TMP Button
+  m_text: Scene2_TMP_button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
