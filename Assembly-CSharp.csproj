@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\ApisForPanel.cs" />
     <Compile Include="Assets\Course Library\_Source_Files\Scripts\DestroyAfterDelay.cs" />
+    <Compile Include="Assets\Inst.cs" />
     <Compile Include="Assets\MyCube.cs" />
     <Compile Include="Assets\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\SceneTitle.cs" />

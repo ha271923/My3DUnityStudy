@@ -15,7 +15,8 @@ public class Inst : MonoBehaviour
         Debug.Log(string.Format("Format   {0}", sceneName));
         Debug.Log(10.ToString("X"));
         Debug.Log(String.Format("HEX={0:X}", 10));
-        print("<color=red>這樣能輸出紅色訊息</color>");
+
+        print("<color=red> +++++++++++++++ </color>");
     }
 
     // Update is called once per frame
