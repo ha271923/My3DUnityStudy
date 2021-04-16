@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,23 +13,30 @@ public class SceneTitle : MonoBehaviour
     private void Awake()
     {
         sceneName = SceneManager.GetActiveScene().name;
-        Debug.LogFormat("{0} {1} {2}", "AAA", "BBB", "CCC");
-        Debug.Log("1 Start:   sceneName=" + sceneName);
-        Debug.Log($"2 Start:   sceneName={sceneName}");
-        Debug.Log(string.Format("Format   sceneName={0}", sceneName));
-        Debug.Log(10.ToString("X"));
-        Debug.Log(String.Format("HEX={0:X}", 10));
-        if(GetComponent<Text>() != null )
+        Type type = gameObject.GetType();
+        print("type="+ type);
+        if (GetComponent<Text>() != null)
+        {
+            Debug.Log("GetComponent<Text>() is Text");
             GetComponent<Text>().text = sceneName;
-        else
             Debug.Log("GetComponent<Text>() is null");
+        }
+        else if (GetComponent<TextMeshProUGUI>() != null)  // 3D 物件 TextMeshPro 在Script裡面叫做 TextMeshProUGUI
+        {
+            Debug.Log("GetComponent<TextMeshProUGUI>() is TextMeshProUGUI");
+            GetComponent<TextMeshProUGUI>().text = sceneName;
+        }
+        else
+        {
+            Debug.Log("GetComponent<Text or TextMeshPro>() are null");
+        }
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Text>().text = sceneName;
+        // GetComponent<Text>().text = sceneName;
     }
 
     // Update is called once per frame
