@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Script2 : MonoBehaviour
 {
-    GameObject L2Parent;
+    public GameObject L2Parent;
     // Start is called before the first frame update
     void Start()
     {
