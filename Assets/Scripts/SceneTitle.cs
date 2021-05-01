@@ -12,7 +12,7 @@ public class SceneTitle : MonoBehaviour
 
     private void Awake()
     {
-        sceneName = SceneManager.GetActiveScene().name;
+        sceneName = Utils.getSceneName();
         Type type = gameObject.GetType();
         print("type="+ type);
         if (GetComponent<Text>() != null)
