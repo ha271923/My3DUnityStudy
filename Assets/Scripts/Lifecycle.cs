@@ -25,6 +25,7 @@ public class Lifecycle : MonoBehaviour
 	{
 		Debug.Log("Start()");
 		// none == this == Monobehaviour >= gameObject
+		Debug.Log("this=" + this);
 		var objectName = this.name;
 		Debug.Log("this.name=" + objectName);
 		objectName = transform.name;

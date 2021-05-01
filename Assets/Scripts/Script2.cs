@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Script2 : MonoBehaviour
 {
-    public GameObject L2Parent;
+    public GameObject m_parentGO;
     // Start is called before the first frame update
     void Start()
     {
 		// Debug.Log("this.name=" + this.name); // object name
-		Debug.Log("this.GetType()=" + this.GetType()); // script name
-        // Debug.Log("this.GetType().Name=" + this.GetType().Name); // script name
-        L2Parent.SetActive(true);
-        Debug.Log("L2Parent=" + L2Parent);
+		Utils.getScriptName(gameObject);
+        Debug.Log("m_parentGO=" + m_parentGO);
     }
 
     // Update is called once per frame

@@ -9,13 +9,19 @@ public class Script1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		Debug.Log("this.GetType()=" + this.GetType()); // script name
+		Utils.getScriptName(gameObject);
 	}
 
     private void OnMouseDown()
     {
-        Val++;
-        sVal++;
-        Debug.Log("GO name=" + transform.name + "   Script name=" + this.GetType() + "   sVal=" + sVal + "   Val=" + Val);
-    }
+		Utils.findParentGO(gameObject, "L1");
+		Utils.findChildGO(gameObject, "L2.2");
+		modify_data_in_current_GO();
+	}
+
+	void modify_data_in_current_GO() {
+		Val++;
+		sVal++;
+		Debug.Log("GO name=" + transform.name + "   Script name=" + this.GetType() + "   sVal=" + sVal + "   Val=" + Val);
+	}
 }
