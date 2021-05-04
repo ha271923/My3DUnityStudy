@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Script3 : MonoBehaviour
 {
     public GameObject otherGameObject;
@@ -17,6 +17,8 @@ public class Script3 : MonoBehaviour
     private void OnMouseDown()
     {
 		modify_data_of_otherGO();
+		modify_data_of_other_GO_UIcomponent();
+		modify_data_of_other_GO_Script(otherGameObject);
 	}
 
 
@@ -30,8 +32,24 @@ public class Script3 : MonoBehaviour
 		{
 			globalScriptcomponent.Val += 1000;
 			GlobalScript.sVal += 7000;
-			Debug.Log("GO name=" + transform.name + "   Script name=" + this.GetType() + "   sVal=" + sVal + "   Val=" + Val);
+			Debug.Log("data GO name=" + transform.name + "   Script name=" + this.GetType() + "   sVal=" + sVal + "   Val=" + Val);
 		}
+	}
+
+	void modify_data_of_other_GO_UIcomponent() {
+		GameObject otherGO = GameObject.Find("TMP_Text");
+		Debug.Log("UI otherGO=" + otherGO);
+		TMP_Text tmp_Text = otherGO.GetComponent<TMP_Text>();
+		Debug.Log("UI tmp_Text=" + tmp_Text);
+		tmp_Text.text = "GO1 modified GO2's component";
+		Debug.Log("UI inputField name=" + tmp_Text.transform.name + "   Script name=" + this.GetType());
+	}
+
+	void modify_data_of_other_GO_Script(GameObject otherGO) {
+		Script1 script1 = otherGO.GetComponent<Script1>();
+		script1.Val +=3000;
+		Script1.sVal +=3000000;
+		Debug.Log("script GO name=" + otherGO.transform.name + "   Script name=" + this.GetType() + "   Script1.sVal=" + sVal + "   script1.Val=" + Val);
 	}
 
 }
