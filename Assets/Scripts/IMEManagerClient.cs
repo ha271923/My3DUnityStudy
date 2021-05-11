@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class IMEManagerClient : MonoBehaviour
 {
-    GameObject m_EventSystemGO;
+    GameObject m_VirtualKeyboardManagerGO;
     IMEManagerServer m_IMEManagerServer;
 
     // Start is called before the first frame update
     void Start()
     {
         // IMEManagerServer.s_focusGO = gameObject;
-        
-        m_EventSystemGO = GameObject.Find("EventSystem");
-		m_IMEManagerServer = m_EventSystemGO.GetComponent<IMEManagerServer>();
+
+        m_VirtualKeyboardManagerGO = GameObject.Find("VirtualKeyboardManager");
+		m_IMEManagerServer = m_VirtualKeyboardManagerGO.GetComponent<IMEManagerServer>();
     }
 
     // Update is called once per frame
@@ -21,4 +21,15 @@ public class IMEManagerClient : MonoBehaviour
     {
         
     }
+
+    public void OnSelect() // addListener() by Inspector UI
+    {
+        Debug.Log("IMEManagerClient::onSelect()");
+    }
+
+    public void OnDeselect() // addListener() by Inspector UI
+    {
+        Debug.Log("IMEManagerClient::onDeselect()");
+    }
+
 }

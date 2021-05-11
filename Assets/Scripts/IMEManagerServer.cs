@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Text;
 
 public class IMEManagerServer : MonoBehaviour
 {
@@ -10,7 +11,14 @@ public class IMEManagerServer : MonoBehaviour
 	IMEKeyBallController m_IMEKeyBallController;
     static public GameObject s_focusGO;
     private TMP_InputField m_InputField;
+	private string mInputContent = null;
+	private StringBuilder onInputClickedSB;
 
+
+	public void onClickKeyBall(string strKey) {
+		onInputClickedSB.Append(strKey);
+		mInputContent = onInputClickedSB.ToString();
+	}
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +29,6 @@ public class IMEManagerServer : MonoBehaviour
 	public IMEManagerServer getInstance(){
 		return this;
 	}
-
-	public void setFocusGO(GameObject GO){
-		s_focusGO = GO;
-	}
-
 
 	private TMP_InputField GetInputField()
 	{
@@ -46,29 +49,35 @@ public class IMEManagerServer : MonoBehaviour
 		return null;
 	}
 
-    private void OnMouseDown()
-    {
-		m_InputField = GetInputField();
-
-        m_InputField.text += "A";
-        // m_InputField.placeholder.text = "ppppp";
-        // m_InputField.textComponent.text = "TMP_Text";
-
-
+	private void UpdateInputField(string str)
+	{
+		if (m_InputField != null && str != null)
+		{
+			m_InputField.text = str;
+		}
 	}
 
-	public void showKeyBall(){
+	public void showKeyBall(GameObject GO){
+		s_focusGO = GO;
+		m_InputField = GetInputField();
+		onInputClickedSB = new StringBuilder("XXXX");
 		m_IMEKeyBallController.show();
 	}
 
 	public void hideKeyBall(){
 		m_IMEKeyBallController.hide();
+		m_InputField = null;
+		onInputClickedSB = null;
+		s_focusGO = null;
 	}
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
+		if (mInputContent != null) {
+			UpdateInputField(mInputContent);
+		}
+		mInputContent = null;
+	}
 }
 

@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class IMEKeyBallController : MonoBehaviour
 {
-    GameObject m_IMEKeyBall;
-
+    GameObject m_VirtualKeyboardManagerGO;
+    MeshRenderer m_IMEKeyBallMeshRender;
+    IMEManagerServer m_IMEManagerServer;
     // Start is called before the first frame update
     void Start()
     {
-        m_IMEKeyBall = gameObject;
+        m_IMEKeyBallMeshRender = GetComponent<MeshRenderer>();
+
+        m_VirtualKeyboardManagerGO = GameObject.Find("VirtualKeyboardManager");
+        m_IMEManagerServer = m_VirtualKeyboardManagerGO.GetComponent<IMEManagerServer>();
+
     }
 
     // Update is called once per frame
@@ -18,20 +23,31 @@ public class IMEKeyBallController : MonoBehaviour
         
     }
 
+    private void OnMouseDown()
+    {
+        m_IMEManagerServer.onClickKeyBall("A");
+    }
+
     public bool isActive(){
-        if (gameObject.active)
-            return true;
-        else
-            return false;
+        return m_IMEKeyBallMeshRender.enabled;
     }
 
     public void show(){
-        m_IMEKeyBall.SetActive(true);
+        m_IMEKeyBallMeshRender.enabled = true;
     }
 
     public void hide(){
-        m_IMEKeyBall.SetActive(false);
+        m_IMEKeyBallMeshRender.enabled = false;
     }
 
+    public void OnSelected()
+    {
+        Debug.Log("OnSelected() +");
+    }
+
+    public void OnDeselect()
+    {
+        Debug.Log("OnDeselect() -");
+    }
 
 }
