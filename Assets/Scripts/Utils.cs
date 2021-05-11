@@ -72,4 +72,23 @@ public class Utils
 		return sceneName;
 	}
 
+	static public GameObject getCurrentSelectedGO() {
+		// 一个场景只能含有一个EventSystem
+		GameObject currentSelected = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+		return currentSelected;
+	}
+
+	static public bool checkIfPointerOnUI() { // Finger or Mouse
+
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+		{
+			if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId) == true)
+			{
+				Debug.Log("Touched the UI");
+				return true;
+			}
+		}
+		return false;
+	}
+
 }
