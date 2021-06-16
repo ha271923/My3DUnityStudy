@@ -1,5 +1,5 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "FA12P2S00021",
     "m_SelectedPackage": {
         "deviceId": "",
         "name": "",
@@ -7,7 +7,26 @@
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "HT82T1F00006",
+            "name": "com.DefaultCompany.My3DUnityStudy",
+            "processId": 14244,
+            "exited": true
+        },
+        {
+            "deviceId": "HT82T1F00006",
+            "name": "com.DefaultCompany.My3DUnityStudy",
+            "processId": 14836,
+            "exited": true
+        },
+        {
+            "deviceId": "HT82T1F00006",
+            "name": "com.DefaultCompany.My3DUnityStudy",
+            "processId": 15542,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -41,9 +60,20 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowHeight": 255.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "Behavior": 0
     },
