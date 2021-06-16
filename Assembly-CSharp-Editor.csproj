@@ -67,6 +67,10 @@
     <Compile Include="Assets\Editor\AssetTestEditor.cs" />
     <Compile Include="Assets\MyAsset\Editor\FindReferenceWindow.cs" />
     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Editor\ReporterEditor.cs" />
+    <Compile Include="Assets\VIUExtension\CommonEventVariable\Hybrid\Editor\CommonEventAssetEditor.cs" />
+    <Compile Include="Assets\VIUExtension\CommonEventVariable\Hybrid\Editor\CommonEventBehaviourEditor.cs" />
+    <Compile Include="Assets\VIUExtension\CommonEventVariable\Hybrid\Editor\CommonVariableAssetEditor.cs" />
+    <Compile Include="Assets\VIUExtension\CommonEventVariable\Hybrid\Editor\CommonVariableBehaviourEditor.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/Unity2019.4.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
