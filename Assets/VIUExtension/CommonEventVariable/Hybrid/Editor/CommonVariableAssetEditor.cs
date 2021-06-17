@@ -126,7 +126,8 @@ namespace HTC.UnityPlugin.CommonEventVariable
             {
                 EditorGUILayout.PropertyField(enableDebugMessageProperty);
                 overrideHandleNameProperty.stringValue = EditorGUILayout.TextField("Override Variable Name", overrideHandleNameProperty.stringValue);
-                EditorGUILayout.PropertyField(valueProperty, new GUIContent(targetObj.VariableHandlerBase.ValueType.Name));
+                if(targetObj.VariableHandlerBase.ValueType.Name != null)
+                    EditorGUILayout.PropertyField(valueProperty, new GUIContent(targetObj.VariableHandlerBase.ValueType.Name));
                 if (onChangeProperty != null) { EditorGUILayout.PropertyField(onChangeProperty); }
             }
 

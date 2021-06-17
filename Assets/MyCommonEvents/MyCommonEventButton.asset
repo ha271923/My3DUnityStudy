@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c66dc450a3c306e4a8ac5aea6256da45, type: 3}
-  m_Name: MyCommonEventString1
+  m_Script: {fileID: 11500000, guid: 8fa8d1d40d137b941942986e875a79aa, type: 3}
+  m_Name: MyCommonEventButton
   m_EditorClassIdentifier: 
   enableDebugMessage: 0
   overrideHandleName: 
   description: 
-  paramValue1: 
   onTrigger:
     m_PersistentCalls:
       m_Calls: []
