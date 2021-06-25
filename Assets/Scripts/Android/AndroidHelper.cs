@@ -31,6 +31,44 @@ public partial class AndroidHelper : MonoBehaviour
 
     private static AndroidLifecycleCallbacks m_callbacks;
 
+
+    public void click_CallStaticMethodBTN() {
+        Debug.LogError("click_CallStaticMethodBTN +++");
+#if ANDROID_DEVICE
+        try {
+            // class name
+            AndroidJavaClass phoneModeUtilClz = new AndroidJavaClass("com.htc.svr.androidSettingsLibrary.PhoneModeUtil");
+            Debug.LogError("phoneModeUtilClz=" + phoneModeUtilClz);
+            // field
+            AndroidJavaObject staticField = phoneModeUtilClz.GetStatic<AndroidJavaObject>("staticField");
+            // method
+            phoneModeUtilClz.CallStatic("staticMethod", "InputParam"); // no return
+        } catch (Exception e) {
+			    Debug.LogError(e.Message);
+	    }
+#endif
+        Debug.LogError("click_CallStaticMethodBTN ---");
+    }
+
+    public void click_CallObjectMethodBTN()
+    {
+        Debug.LogError("click_CallObjectMethodBTN +++");
+#if ANDROID_DEVICE
+        try {
+            // class name, support input param
+            AndroidJavaObject phoneModeUtilObj = new AndroidJavaObject("com.htc.svr.androidSettingsLibrary.PhoneModeUtil");
+            Debug.LogError("phoneModeUtilObj=" + phoneModeUtilObj);
+            // field
+            AndroidJavaObject objectField = phoneModeUtilObj.Get<AndroidJavaObject>("objectField");
+            // method
+            phoneModeUtilObj.Call("objectMethod", "InputParam"); // no return
+        } catch (Exception e) {
+			    Debug.LogError(e.Message);
+        }
+#endif
+        Debug.LogError("click_CallObjectMethodBTN ---");
+    }
+
     /// <summary>
     /// Registers for the Android pause event.
     /// </summary>
@@ -380,4 +418,66 @@ public partial class AndroidHelper : MonoBehaviour
         }
 #endif
     }
+
+#if PASTE_TO_ANDROID_JAVA_CODE // androidSettingLibrary-debug.aar
+package com.htc.svr.androidSettingsLibrary;
+
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+
+public class PhoneModeUtil {
+    static String TAG = "PhoneModeUtil";
+    private static boolean sInit = false;
+    private static PhoneModeWrapper sWrapper;
+    private static Context sContext;
+    public  String objectField="objectFieldString";
+    public  static String staticField="staticFieldString";
+
+    public static void setContext(Context context) {
+        Log.i(TAG,"setContext()++");
+        sContext = context;
+        if (!sInit) {
+            sInit = true;
+            sWrapper = new PhoneModeWrapper(context);
+        }
+        Log.i(TAG,"setContext()--");
+    }
+
+    public static boolean isInit(){
+        return sInit;
+    }
+    public static void addListener(int type, String gameObjectName, String methodName) {
+        Log.i(TAG,"addListener()");
+        ThreadHelper.postToBackGround(()-> sWrapper.addListener(type, gameObjectName, methodName),"[addListener]");
+    }
+
+    public static void removeListener(int type, String gameObjectName) {
+        Log.i(TAG,"removeListener()");
+        ThreadHelper.postToBackGround(()-> sWrapper.removeListener(type, gameObjectName),"[removeListener]");
+    }
+
+    public static void notifyAll(int type, String result) {
+        sWrapper.notifyAll(type, result);
+    }
+
+    public static final int GENERIC_MODE_SWITCH_FROM_VIEWER = 1;
+    public static void enterPhoneMode(boolean bPhoneMode){
+        Log.i(TAG,"enterPhoneMode("+bPhoneMode+")");
+        Intent i = new Intent("com.htc.modearbiter.PUBLIC_REQUEST");
+        i.putExtra("REQ_TYPE", GENERIC_MODE_SWITCH_FROM_VIEWER);
+        i.putExtra("REQ_MODE", bPhoneMode ? "SP" : "AIO");
+        sContext.sendBroadcast(i);
+    }
+
+    public static void staticMethod(String msg){
+        Log.i(TAG,"staticMethod("+msg+")");
+    }
+
+    public void objectMethod(String msg){
+        Log.i(TAG,"objectMethod("+msg+")");
+    }
+
+}
+#endif
 }
