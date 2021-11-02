@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "FA12P2S00021",
+    "m_SelectedDeviceId": "a8898bf7fbca",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "a8898bf7fbca",
+        "name": "com.DefaultCompany.My3DUnityStudy",
+        "processId": 18897,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -24,6 +24,48 @@
             "deviceId": "HT82T1F00006",
             "name": "com.DefaultCompany.My3DUnityStudy",
             "processId": 15542,
+            "exited": false
+        },
+        {
+            "deviceId": "FA12P2S00021",
+            "name": "com.DefaultCompany.My3DUnityStudy",
+            "processId": 25119,
+            "exited": false
+        },
+        {
+            "deviceId": "FA12P2S00021",
+            "name": "com.DefaultCompany.My3DUnityStudy",
+            "processId": 25422,
+            "exited": false
+        },
+        {
+            "deviceId": "FA12P2S00021",
+            "name": "com.DefaultCompany.My3DUnityStudy",
+            "processId": 25640,
+            "exited": false
+        },
+        {
+            "deviceId": "FA12P2S00021",
+            "name": "com.DefaultCompany.My3DUnityStudy",
+            "processId": 25912,
+            "exited": false
+        },
+        {
+            "deviceId": "FA12P2S00021",
+            "name": "com.DefaultCompany.My3DUnityStudy",
+            "processId": 3555,
+            "exited": false
+        },
+        {
+            "deviceId": "FA12P2S00021",
+            "name": "com.DefaultCompany.My3DUnityStudy",
+            "processId": 3916,
+            "exited": false
+        },
+        {
+            "deviceId": "a8898bf7fbca",
+            "name": "com.DefaultCompany.My3DUnityStudy",
+            "processId": 18897,
             "exited": false
         }
     ],

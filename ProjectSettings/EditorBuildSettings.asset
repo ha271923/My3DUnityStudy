@@ -14,9 +14,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MyPrefabs.unity
     guid: a61a2ed0b1d4baf4c9a6cfa7dda3de77
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MyAndroidApiTest.unity
     guid: 8ff5e5fe95e780f45a6f6a2032ff8500
+  - enabled: 0
+    path: Assets/Scenes/MainSceneLoader.unity
+    guid: 23f4a1dfb9f6a6b48b9967fd7e59ba63
+  - enabled: 0
+    path: Assets/Scenes/MyUITest.unity
+    guid: 50f223e008e669545b88cad274fd4429
+  - enabled: 1
+    path: Assets/Scenes/MyVIUExtension.unity
+    guid: 673276347234f7c49ae04b22d99305b2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 37aa17b773f8c084e8af86c19c671955,
       type: 2}
