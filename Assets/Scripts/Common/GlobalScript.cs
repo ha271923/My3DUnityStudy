@@ -18,4 +18,9 @@ public class GlobalScript : MonoBehaviour
     {
         
     }
+
+	public void API_1() {
+		Debug.LogError("GlobalScript API_1");
+	}
+
 }
