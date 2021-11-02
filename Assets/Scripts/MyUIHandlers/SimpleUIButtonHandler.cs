@@ -5,16 +5,21 @@ using UnityEngine.UI;
 public class SimpleUIButtonHandler : MonoBehaviour
 {
     [SerializeField]
-    private Button inButtonUI;
+    public Button inButtonUI;
     [SerializeField]
-    protected CommonEventAsset outCommonEvent; // Drag to set .asset in UnityUI
+    public CommonEventAsset<int, CommonEventAssetInt.TriggerEvent> outCommonEvent;    // == CommonEventAssetInt
+    public CommonVariableAsset<int, CommonVariableAssetInt.OnChangeEvent> outCommonVariable; // == CommonVariableAssetInt
+
+    private static int eventParam;
 
     private void Awake()
     {
         inButtonUI = GetComponent<Button>();
+        inButtonUI.onClick.AddListener(OnButtonClicked);
+
         outCommonEvent.Handler.OnTrigger += onEventTriggered;
-        GameObject GO = GameObject.Find("MyEventController");
-        outCommonEvent.Handler.OnTrigger += GO.GetComponent<MyEventHanlderCenter>().onUpdateEventResult0;
+
+        outCommonVariable.Handler.OnChange += onVariableChanged;
     }
 
     private void OnEnable()
@@ -29,12 +34,17 @@ public class SimpleUIButtonHandler : MonoBehaviour
 
     public void OnButtonClicked()
     {
-        Debug.Log("OnButtonClicked  event Triggering");
-        outCommonEvent.Handler.Trigger();
+        Debug.Log("OnButtonClicked");
+        outCommonEvent.Handler.Trigger(eventParam++);
+        outCommonVariable.Handler.SetValue(outCommonVariable.Handler.CurrentValue+1);
     }
 
-    public void onEventTriggered() {
-        Debug.Log("onEventTriggered  event Triggered");
+    public void onEventTriggered(int param) {
+        Debug.Log("onEventTriggered  event Triggered!    eventParam="+ eventParam);
+    }
+
+    public void onVariableChanged() {
+        Debug.Log("onVariableChanged  variable Changed!   CurrentValue="+ outCommonVariable.Handler.CurrentValue);
 
     }
 
