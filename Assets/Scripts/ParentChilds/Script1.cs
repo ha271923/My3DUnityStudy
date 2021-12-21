@@ -7,7 +7,6 @@ namespace MyGOs
 
     public class Script1 : MonoBehaviour
     {
-        private GlobalScript global;
         // Start is called before the first frame update
         void Start()
         {
@@ -22,8 +21,7 @@ namespace MyGOs
 
         public void API_1()
         {
-            Debug.LogError("Script1 API_1");
-            global.API_1();
+            Debug.LogError("this=" + this+ "    Script1 API_1");
         }
     }
 }

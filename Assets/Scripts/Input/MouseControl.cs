@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class Script3 : MonoBehaviour
+public class MouseControl : MonoBehaviour
 {
     public GameObject otherGameObject;
     int Val = 0;

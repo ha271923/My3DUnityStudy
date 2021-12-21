@@ -10,7 +10,7 @@ public class AndroidFrameworkApi : MonoBehaviour
     public void triggerVibration()
     {
         Debug.Log("triggerVibration +++");
-        Handheld.Vibrate();
+        // Handheld.Vibrate();
         Debug.Log("triggerVibration ---");
     }
 

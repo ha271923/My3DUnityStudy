@@ -18,5 +18,10 @@ namespace MyGOs
         {
 
         }
+
+        public void API_1()
+        {
+            Debug.LogError("this=" + this + "    Script1 API_1");
+        }
     }
 }
