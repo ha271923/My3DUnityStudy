@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine.Events;
+using System;
 
 public class MyAssetBundleWebLoader2 : MonoBehaviour
 {
@@ -25,14 +26,14 @@ public class MyAssetBundleWebLoader2 : MonoBehaviour
     {
         // string bundleURL = BundleFolder + assetName + "-";
         string bundleURL = BundleFolder;
-
+/*
         //append platform to asset bundle name
 #if UNITY_ANDROID
         bundleURL += "Android";
 #else
         bundleURL += "IOS";
 #endif
-
+*/
         Debug.Log("Requesting bundle at " + bundleURL);
 
         //request asset bundle
@@ -49,7 +50,14 @@ public class MyAssetBundleWebLoader2 : MonoBehaviour
             if (bundle != null)
             {
                 string rootAssetPath = bundle.GetAllAssetNames()[0];
-                GameObject arObject = Instantiate(bundle.LoadAsset(rootAssetPath) as GameObject, bundleParent);
+                GameObject arObject = null;
+                try
+                {
+                    arObject = Instantiate(bundle.LoadAsset(rootAssetPath) as GameObject, bundleParent); // if AB is prefab already
+                }
+                catch (Exception e) {
+                    Debug.LogError("e=" + e);
+                }
                 bundle.Unload(false);
                 if(callback != null)
                     callback(arObject);

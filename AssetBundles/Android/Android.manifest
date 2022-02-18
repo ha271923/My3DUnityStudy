@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 3047195136
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: mysixbuttons
+      Dependencies: {}
+    Info_1:
+      Name: cfx3_snow_dense
+      Dependencies: {}
