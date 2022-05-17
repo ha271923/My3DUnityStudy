@@ -1,5 +1,4 @@
-﻿using I2.Loc;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static TMPro.TMP_Dropdown;
@@ -7,8 +6,9 @@ using static TMPro.TMP_Dropdown;
 public class DropdownTest : MonoBehaviour
 {
     static public List<OptionData> sInteractionMethodOptions = new List<OptionData>();
-
+    /*
     TMPro.TMP_Dropdown interactionMethodDropdown;
+
     private void OnEnable()
     {
 
@@ -41,5 +41,5 @@ public class DropdownTest : MonoBehaviour
         sInteractionMethodOptions.Add(new TMP_Dropdown.OptionData(ScriptLocalization.Settings.KIOSK_INTERACTION_MODE_PAC));
         sInteractionMethodOptions.Add(new TMP_Dropdown.OptionData(ScriptLocalization.Settings.KIOSK_INTERACTION_MODE_GAZE));
         interactionMethodDropdown.AddOptions(sInteractionMethodOptions);
-    }
+    }*/
 }

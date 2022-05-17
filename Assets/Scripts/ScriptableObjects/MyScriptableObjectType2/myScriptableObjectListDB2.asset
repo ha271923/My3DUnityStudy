@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074face0fb6a45340bb61daf15506ef8, type: 3}
+  m_Name: myScriptableObjectListDB2
+  m_EditorClassIdentifier: 
+  myArmorObjectList:
+  - {fileID: 11400000, guid: 07b24478a79b6e8419af48894be50b00, type: 2}
+  - {fileID: 11400000, guid: f6c2e8a853ec4e843a4b00b2988135cb, type: 2}
+  - {fileID: 11400000, guid: 468e37db4cc87d6438c396df079f32fe, type: 2}
+  - {fileID: 11400000, guid: d457c5097138fe64cb0b152be2d4ebbf, type: 2}

@@ -7,6 +7,10 @@ public class MyScriptableObjectTest : MonoBehaviour
     public MyScriptableObjectType1 myAttack;
     public MyScriptableObjectType2 myDefense;
 
+    public MyScriptableObjectListDB1 allWeapons;
+    public MyScriptableObjectListDB2 allArmors;
+
+
     void Start()
     {
         Debug.Log("myAttack.name=" + myAttack.name);

@@ -1795,6 +1795,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAttack: {fileID: 11400000, guid: 0d113c0f03616084d88753afae89be10, type: 2}
   myDefense: {fileID: 11400000, guid: 07b24478a79b6e8419af48894be50b00, type: 2}
+  allWeapons: {fileID: 11400000, guid: b50d36e7312c2fc4dbc926bd644b72cd, type: 2}
+  allArmors: {fileID: 11400000, guid: 9c6140c8bf9adae4d8641c194b436a81, type: 2}
 --- !u!1 &1447633305
 GameObject:
   m_ObjectHideFlags: 0

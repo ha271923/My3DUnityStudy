@@ -10,4 +10,27 @@ public class MyScriptableObjectType1 : ScriptableObject
     public float atk;
     public float price;
     public Sprite sp;
+
+    private void OnValidate()
+    {
+        Debug.Log("OnValidate");
+    }
+
+    private void Awake()
+    {
+        Debug.Log("Awake");
+    }
+    private void OnEnable()
+    {
+        Debug.Log("OnEnable");
+    }
+
+    private void OnDisable()
+    {
+        Debug.Log("OnDisable");
+    }
+    private void OnDestroy()
+    {
+        Debug.Log("OnDestroy");
+    }
 }
