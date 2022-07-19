@@ -84,6 +84,8 @@ namespace SimpleFileBrowser
 			{
 				if( m_shouldUseSAF == null )
 					m_shouldUseSAF = AJC.CallStatic<bool>( "CheckSAF" );
+				    // m_shouldUseSAF = true;   // Hawk: force use SAF
+
 				// Debug.LogWarning(LOG_TAG+"ShouldUseSAF.Value=" + m_shouldUseSAF.Value);
 				return m_shouldUseSAF.Value;
 			}
