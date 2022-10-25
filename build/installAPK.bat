@@ -1,1 +1,0 @@
-adb install ..\app.apk
